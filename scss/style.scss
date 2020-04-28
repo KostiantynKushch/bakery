@@ -1,0 +1,18 @@
+@import 'fonts';
+
+@import 'normalize';
+@import 'layout';
+@import 'elements';
+
+@import 'header';
+@import 'hero';
+
+body {
+}
+
+/* Layout */
+.ba-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1260px;
+}
