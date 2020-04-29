@@ -1,14 +1,14 @@
 @import 'fonts';
 
+$main_font: 'ProximaNova', sans-serif;
+$main_font_color: '#56534c';
+
 @import 'normalize';
 @import 'layout';
 @import 'elements';
 
 @import 'header';
 @import 'hero';
-
-body {
-}
 
 /* Layout */
 .ba-container {

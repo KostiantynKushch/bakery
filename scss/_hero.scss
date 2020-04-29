@@ -1,5 +1,60 @@
 .ba-hero {
-  min-height: 100vh;
   background: url(../img/bg-hero.png) no-repeat center;
   background-size: cover;
+
+  &__inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  &__title {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+
+      top: -10vh;
+      left: 0;
+      right: 0;
+      height: 50vh;
+
+      background: rgb(86, 79, 76);
+      background: radial-gradient(
+        circle,
+        rgba(86, 79, 76, 1) 0%,
+        rgba(86, 83, 76, 0) 70%
+      );
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: 0;
+      right: 0;
+      height: 9px;
+      background: url(../img/dashed_line.png) no-repeat bottom center;
+      background-size: contain;
+    }
+  }
+  &__intro {
+    text-align: center;
+  }
+  &__button {
+    text-transform: uppercase;
+    border-color: #9e9c93;
+    background-color: #56534c;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__title,
+  &__intro,
+  &__button {
+    z-index: 0;
+  }
 }
