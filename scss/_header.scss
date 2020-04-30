@@ -6,9 +6,24 @@
   padding: 15px 0;
   background-color: rgba($color: #56534c, $alpha: 0.6);
   max-height: 78px;
+  z-index: 10;
 
   @media screen and (min-width: 1024px) {
     max-height: none;
+  }
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 78px;
+    background-color: rgba($color: #56534c, $alpha: 0.1);
+    backdrop-filter: blur(5px);
+    transform: translateY(-78px);
+
+    transition: transform 0.2s ease-in-out;
   }
 
   &:after {
@@ -35,6 +50,7 @@
     z-index: 2;
   }
   &__logo {
+    height: 45px;
     &:hover {
       opacity: 0.6;
     }
@@ -53,7 +69,13 @@
   }
 }
 
+.scrolls:before,
+.ba-header--collapsed:before {
+  transform: translateY(0);
+}
+
 .ba-social {
+  height: 16px;
   &__link {
     text-decoration: none;
     &:hover {
@@ -122,6 +144,7 @@
       @media screen and (min-width: 1024px) {
         bottom: 0;
         left: -25px;
+        line-height: 1;
       }
       @media screen and (min-width: 1440px) {
         left: -45px;

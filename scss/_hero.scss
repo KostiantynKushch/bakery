@@ -9,9 +9,33 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -41px;
+      height: 80px;
+      width: 80px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -53px;
+      height: 106px;
+      width: 106px;
+      margin: 0 auto;
+      background: url(../img/bread-icon.png) no-repeat center;
+    }
   }
   &__title {
     position: relative;
+    text-shadow: 0 1px 0 #3d3029;
+    @media screen and (min-width: 640px) and (min-height: 500px) {
+      margin-bottom: 100px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -25,7 +49,7 @@
       background: radial-gradient(
         circle,
         rgba(86, 79, 76, 1) 0%,
-        rgba(86, 83, 76, 0) 70%
+        rgba(86, 83, 76, 0) 50%
       );
       z-index: -1;
     }
@@ -37,11 +61,21 @@
       right: 0;
       height: 9px;
       background: url(../img/dashed_line.png) no-repeat bottom center;
-      background-size: contain;
+      // background-size: contain;
+      @media screen and (min-width: 640px) {
+        bottom: -60%;
+      }
     }
   }
   &__intro {
     text-align: center;
+    text-shadow: 0 1px 0 #3d3029;
+    @media screen and (min-width: 640px) and (min-height: 500px) {
+      font-size: 24px;
+      letter-spacing: 2.4px;
+      max-width: 550px;
+      line-height: 1.5;
+    }
   }
   &__button {
     text-transform: uppercase;
