@@ -1,0 +1,163 @@
+.ba-art {
+  background: #fff;
+  padding: 70px 0;
+  &__description {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 5px;
+    letter-spacing: 1.2px;
+    color: $main_font_color;
+  }
+  &__sub-title {
+    margin: 0 0 40px;
+    color: $brown_color;
+    line-height: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+  &__intro {
+    letter-spacing: 1.4px;
+    margin-bottom: 45px;
+  }
+  &__author {
+  }
+  &__collage {
+  }
+}
+
+.ba-author {
+  &__position {
+    margin-bottom: 45px;
+    letter-spacing: 0.6px;
+    color: $main_font_color;
+  }
+  &__profile {
+    position: relative;
+  }
+  &__first-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__last-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__first-name,
+  &__last-name {
+    font-family: Alegreya, serif;
+    font-weight: 400;
+    color: $main_font_color;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    line-height: 1.25;
+    border-top: 1px solid #d7d5ca;
+    border-bottom: 1px solid #d7d5ca;
+    padding: 10px 5px;
+    width: 33%;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    width: 30%;
+    object-fit: contain;
+    margin-bottom: 45px;
+    max-width: 100px;
+  }
+  &__quote {
+    font-family: Scriptina;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    line-height: 1.25;
+    color: $brown_color;
+    margin: 0 0 70px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 23px;
+      height: 14px;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAYAAADE84fzAAABjElEQVQ4T5VUMUzCQBT9/ygmGBbcdMQNR0ZXEodCTCrFhERG3VxdHV11dCIxIZFqEy0djAwOsumom6tuMuhgjNw3v6TlqFeoN9699/67d/8fgmZZllnMClHio/MLr6fD6PZse7MkSBZJ4rDrXg9QBTWbZmH0DRUCXAOCdxKZvuNcPc8Tt6yN5QwsVFDQKkl6HcGP57o3b5E4AwxhtAAwB5Luu67fnyfK53xLQ2ArwEpxy45DXiA+LTwNmFVgzMvuMYaQPMfxH1V8IN7Yqu4DwhICPvwn45AXdxw5t22zjIQ13jAW6LjT8Ydp4lB5i/nPo3b77ivOQ9syd1HgCj+E4/qnaYQZs103bX54kvjiuN6ZjoeNevUwyGwGSEds1M0DfvxZUUbi3Hrdy95JWucTU8k3nogDAAI9SQkFjomLsKtc/qOvyzN0PsbpeWhbtR1u/iTHSdcOM0/iccyo9qoWmBBXGl7Q52pb/SkQmzr1fB5PGX/+rKAc/CtB+/DfQoP41MWL8/hnQKxH0Sq8Xxk2x/wVehzcAAAAAElFTkSuQmCC);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      width: 23px;
+      height: 14px;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAYAAADE84fzAAABeklEQVQ4T5WUv0/CUBDH7yoQSHTQzdlNR91wcKhxKGhS25KQmLC5ubr6L+jIRBxIoNjEQAc3B0dX2HTUDRcNRMo7c0CJ1Ff6fEt/fr5333ffFgEASlaxwMeRED3P81/5XGUxR0IMAwi6nvfwHmWQb9j2yTaKsQ4IGyTwJZ0VnXrd/0gq8JtDoG5u9atdqz0OQ24iHq6SZdgEuANAg0AEt7JuZAXnHEE/oJEbcgviDDrmcR40ccgFUhmoqjiI4/6IT2cwdUCC3lzPryZtT9R5yEnFTfNoM6WlzxkiXGm67n1PpcAiR22p+MSmZVwCYI4H1Wj5rop4lIsXPy1ccHqAoN+869woi4cc0CCx83+LzxxzM1guG+vjb9CnEQTgnGuaGIbXceKVykF28LmmE9CelOPObbN4hhptxdlGwOdGq92JPlfh0LEKV8v2M5Wha1nWnfneymnm0DENHTTcl72yLIYq3OzfYuyiwPwkHTwIoO5IBE9Jn79tL+d+ALtL1STnHRVtAAAAAElFTkSuQmCC);
+    }
+  }
+}
+
+.ba-collage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__picture {
+    max-width: 46%;
+    margin: 10px 5px 5px 0;
+    position: relative;
+    @media screen and (min-width: 640px) {
+      margin: 10px 10px 10px 0;
+    }
+    &:nth-child(2n) {
+      margin: 10px 0 5px 10px;
+      @media screen and (min-width: 640px) {
+        margin: 10px 0 10px 10px;
+      }
+    }
+    img {
+      object-fit: contain;
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      bottom: 6px;
+      right: 6px;
+
+      border: 5px solid #ffffff;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+
+    background: url(../img/col-bg-title.png) no-repeat center;
+    background-size: contain;
+    font-family: Alegreya, serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    color: $brown_color;
+    padding: 15% 40px 40px 40px;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    opacity: 0.96;
+    @media screen and (min-width: 490px) {
+      font-size: 25px;
+    }
+    @media screen and (min-width: 640px) {
+      font-size: 30px;
+    }
+  }
+}

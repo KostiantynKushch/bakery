@@ -1,7 +1,8 @@
 @import 'fonts';
 
 $main_font: 'ProximaNova', sans-serif;
-$main_font_color: '#56534c';
+$main_font_color: #56534c;
+$brown_color: #a47d5e;
 
 @import 'normalize';
 @import 'layout';
@@ -9,7 +10,7 @@ $main_font_color: '#56534c';
 
 @import 'header';
 @import 'hero';
-@import 'breakfast';
+@import 'art';
 
 /* Layout */
 .ba-container {
