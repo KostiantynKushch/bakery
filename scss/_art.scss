@@ -1,6 +1,9 @@
 .ba-art {
   background: #fff;
   padding: 70px 0;
+  @media screen and (min-width: 1024px) {
+    padding: 90px 0;
+  }
   &__description {
     text-align: center;
   }
@@ -8,17 +11,27 @@
     margin-bottom: 5px;
     letter-spacing: 1.2px;
     color: $main_font_color;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 10px;
+    }
   }
   &__sub-title {
     margin: 0 0 40px;
     color: $brown_color;
     line-height: 0.6;
     text-transform: uppercase;
-    letter-spacing: 1.4px;
+    letter-spacing: 2.7px;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 67px;
+    }
   }
   &__intro {
     letter-spacing: 1.4px;
     margin-bottom: 45px;
+    @media screen and (min-width: 1024px) {
+      max-width: 500px;
+      margin: 0 auto 40px auto;
+    }
   }
   &__author {
   }
@@ -27,6 +40,8 @@
 }
 
 .ba-author {
+  max-width: 400px;
+  margin: 0 auto;
   &__position {
     margin-bottom: 45px;
     letter-spacing: 0.6px;
@@ -34,15 +49,16 @@
   }
   &__profile {
     position: relative;
+    margin-bottom: 50px;
   }
   &__first-name {
     position: absolute;
-    top: 0;
+    top: -7px;
     left: 0;
   }
   &__last-name {
     position: absolute;
-    top: 0;
+    top: -7px;
     right: 0;
   }
   &__first-name,
@@ -55,44 +71,63 @@
     line-height: 1.25;
     border-top: 1px solid #d7d5ca;
     border-bottom: 1px solid #d7d5ca;
-    padding: 10px 5px;
+    padding: 16px 5px;
     width: 33%;
+    @media screen and (min-width: 640px) {
+      width: 35%;
+    }
   }
 
   &__picture {
     border-radius: 50%;
     width: 30%;
     object-fit: contain;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     max-width: 100px;
   }
   &__quote {
     font-family: Scriptina;
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.7px;
     line-height: 1.25;
     color: $brown_color;
     margin: 0 0 70px;
     position: relative;
 
+    max-width: 236px;
+    margin: 0 auto;
+
     &:before {
       content: '';
       position: absolute;
       top: -10px;
-      left: 0;
+      left: -20px;
       width: 23px;
       height: 14px;
       background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAYAAADE84fzAAABjElEQVQ4T5VUMUzCQBT9/ygmGBbcdMQNR0ZXEodCTCrFhERG3VxdHV11dCIxIZFqEy0djAwOsumom6tuMuhgjNw3v6TlqFeoN9699/67d/8fgmZZllnMClHio/MLr6fD6PZse7MkSBZJ4rDrXg9QBTWbZmH0DRUCXAOCdxKZvuNcPc8Tt6yN5QwsVFDQKkl6HcGP57o3b5E4AwxhtAAwB5Luu67fnyfK53xLQ2ArwEpxy45DXiA+LTwNmFVgzMvuMYaQPMfxH1V8IN7Yqu4DwhICPvwn45AXdxw5t22zjIQ13jAW6LjT8Ydp4lB5i/nPo3b77ivOQ9syd1HgCj+E4/qnaYQZs103bX54kvjiuN6ZjoeNevUwyGwGSEds1M0DfvxZUUbi3Hrdy95JWucTU8k3nogDAAI9SQkFjomLsKtc/qOvyzN0PsbpeWhbtR1u/iTHSdcOM0/iccyo9qoWmBBXGl7Q52pb/SkQmzr1fB5PGX/+rKAc/CtB+/DfQoP41MWL8/hnQKxH0Sq8Xxk2x/wVehzcAAAAAElFTkSuQmCC);
+      @media screen and (min-width: 640px) {
+        left: -60px;
+      }
+      @media screen and (min-width: 1024px) {
+        left: -85px;
+        top: -15px;
+      }
     }
     &:after {
       content: '';
       position: absolute;
-      right: 0;
+      right: -20px;
       bottom: -20px;
       width: 23px;
       height: 14px;
       background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAYAAADE84fzAAABeklEQVQ4T5WUv0/CUBDH7yoQSHTQzdlNR91wcKhxKGhS25KQmLC5ubr6L+jIRBxIoNjEQAc3B0dX2HTUDRcNRMo7c0CJ1Ff6fEt/fr5333ffFgEASlaxwMeRED3P81/5XGUxR0IMAwi6nvfwHmWQb9j2yTaKsQ4IGyTwJZ0VnXrd/0gq8JtDoG5u9atdqz0OQ24iHq6SZdgEuANAg0AEt7JuZAXnHEE/oJEbcgviDDrmcR40ccgFUhmoqjiI4/6IT2cwdUCC3lzPryZtT9R5yEnFTfNoM6WlzxkiXGm67n1PpcAiR22p+MSmZVwCYI4H1Wj5rop4lIsXPy1ccHqAoN+869woi4cc0CCx83+LzxxzM1guG+vjb9CnEQTgnGuaGIbXceKVykF28LmmE9CelOPObbN4hhptxdlGwOdGq92JPlfh0LEKV8v2M5Wha1nWnfneymnm0DENHTTcl72yLIYq3OzfYuyiwPwkHTwIoO5IBE9Jn79tL+d+ALtL1STnHRVtAAAAAElFTkSuQmCC);
+      @media screen and (min-width: 640px) {
+        right: -60px;
+      }
+      @media screen and (min-width: 1024px) {
+        right: -83px;
+      }
     }
   }
 }
@@ -103,6 +138,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  @media screen and (min-width: 1440px) {
+    margin-left: -30px;
+    padding-top: 15px;
+  }
 
   &__picture {
     max-width: 46%;
@@ -110,6 +149,9 @@
     position: relative;
     @media screen and (min-width: 640px) {
       margin: 10px 10px 10px 0;
+    }
+    @media screen and (min-width: 1440px) {
+      max-width: 50%;
     }
     &:nth-child(2n) {
       margin: 10px 0 5px 10px;
@@ -139,25 +181,29 @@
     bottom: 25%;
     left: 25%;
     right: 25%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: url(../img/col-bg-title.png) no-repeat center;
     background-size: contain;
-    font-family: Alegreya, serif;
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    line-height: 1.2;
-    color: $brown_color;
-    padding: 15% 40px 40px 40px;
-    text-align: center;
     margin: 0;
-    display: inline-block;
     opacity: 0.96;
-    @media screen and (min-width: 490px) {
-      font-size: 25px;
-    }
-    @media screen and (min-width: 640px) {
-      font-size: 30px;
+    p {
+      font-family: Alegreya, serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
+      color: $brown_color;
+      text-align: center;
+      margin: 0;
+      max-width: 60%;
+      @media screen and (min-width: 500px) {
+        font-size: 26px;
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 30px;
+      }
     }
   }
 }
