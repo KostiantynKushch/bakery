@@ -21,15 +21,19 @@ hamb.addEventListener('click', () => {
 // blure header on scroll
 
 window.addEventListener('scroll', () => {
-	// console.log(window.scrollY);
 	if (document.documentElement.scrollTop > 10) {
 		header.classList.add('scrolls');
 	} else if (window.scrollY == 0) {
-		console.log('top');
 		if (header.classList.contains('scrolls')) {
 			header.classList.remove('scrolls');
-			console.log('removed');
 		}
 
 	}
+});
+
+
+// preloader
+window.addEventListener('load', () => {
+	const preloader = document.querySelector('.ba-preloader');
+	preloader.classList.add('loaded');
 });
