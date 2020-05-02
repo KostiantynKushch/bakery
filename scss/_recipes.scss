@@ -1,0 +1,233 @@
+.ba-recipes {
+  padding: 30px 0 70px 0;
+  background: url(../img/bg-recipes.png) no-repeat top center;
+  background-size: cover;
+  &__wraper {
+    position: relative;
+  }
+  &__slider {
+    .slick-list {
+      overflow: hidden;
+      padding-top: 90px;
+    }
+    .slick-track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__slide {
+    position: relative;
+  }
+  &__slider-nav {
+  }
+  &__item {
+  }
+}
+
+.ba-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  &__rate {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 15px;
+    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .ba-star {
+      width: 21px;
+      height: 20px;
+    }
+  }
+  &__picture {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &__recipe {
+    padding: 10% 0 30% 0;
+    margin-top: 43%;
+    z-index: 3;
+    transform: translateY(25%);
+    transition: transform 0.3s;
+    @media screen and (min-width: 500px) {
+      transform: translateY(33%);
+    }
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.ba-recipe {
+  background-color: #ffffff;
+  &__wraper {
+    padding: 0 15px 0 15px;
+  }
+  &__cook-time {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    background: url(../img/bg-time.png) no-repeat center;
+    background-size: contain;
+    padding: 10px;
+    p {
+      margin: 0;
+      font-family: Alegreya;
+      color: $brown_color;
+      text-align: center;
+      @media screen and (min-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    color: $main_font_color;
+    margin-bottom: 10px;
+  }
+  &__sub-title {
+    margin: 0 0 40px;
+  }
+  &__content {
+    .ba-content {
+      &--hidden {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      &--hidden.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.ba-roll-btn {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  //   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  &__icon {
+    width: 9px;
+    height: 16px;
+    //  margin: auto 0;
+  }
+  &:focus,
+  &:active {
+    border-radius: 50%;
+    border: 2px solid #d8bba3;
+  }
+}
+
+.ba-cook-time {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+  &__time {
+    color: #dfc691;
+    font-size: 42px;
+    line-height: 0.9;
+    letter-spacing: 9.2px;
+    font-weight: 700;
+    @media screen and (min-width: 1024px) {
+      font-size: 92px;
+    }
+  }
+  &__measurement {
+  }
+}
+
+.ba-nav-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //   max-width: 60%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #fff;
+  &__slide {
+    outline: none;
+    cursor: pointer;
+    width: 54px !important;
+    &:focus,
+    &:active {
+      .ba-nav-slider__pic {
+        border-radius: 50%;
+        border: 2px solid #d8bba3;
+      }
+    }
+  }
+  &__pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid transparent;
+  }
+  .slick-list {
+    overflow: hidden;
+    max-width: 70%;
+  }
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .slick-arrow {
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    outline: none;
+    border-radius: 50%;
+    &:focus,
+    &:active {
+      border-radius: 50%;
+      border: 2px solid #d8bba3;
+    }
+  }
+  .slick-prev {
+    background: url(../img/arrow-left-active.svg) no-repeat center;
+  }
+  .slick-next {
+    background: url(../img/arrow-right-active.svg) no-repeat center;
+  }
+  .slick-disabled {
+    opacity: 0.4;
+  }
+}
+
+.ba-nav-slider__slide.slick-current {
+  .ba-nav-slider__pic {
+    border: 2px solid #d8bba3;
+  }
+}

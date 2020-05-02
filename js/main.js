@@ -3,6 +3,7 @@
 
 })();
 
+
 // mobile menu
 
 const header = document.querySelector('.ba-header');
@@ -37,3 +38,6 @@ window.addEventListener('load', () => {
 	const preloader = document.querySelector('.ba-preloader');
 	preloader.classList.add('loaded');
 });
+
+
+

@@ -51,6 +51,14 @@ h6 {
 
 p {
   font: 400 14px/1.7 'ProximaNova', sans-serif;
+  letter-spacing: 1.4px;
+}
+
+.ba-sub-title {
+  color: $brown_color;
+  line-height: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
 }
 
 a {
