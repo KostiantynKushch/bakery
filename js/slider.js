@@ -1,5 +1,15 @@
 // slick slider
 $(document).ready(function () {
+	$('.ba-cook-time').slick({
+		arrows: false,
+		zIndex: 1,
+		infinite: false,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		swipe: false,
+		asNavFor: '.ba-slider'
+	});
 	$('.ba-recipes__slider').slick({
 		arrows: false,
 		zIndex: 1,
@@ -8,7 +18,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		swipe: false,
-		asNavFor: '.ba-nav-slider'
+		asNavFor: '.ba-slider'
 	});
 	$('.ba-nav-slider').slick({
 		arrows: true,
@@ -18,7 +28,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		focusOnSelect: true,
-		asNavFor: '.ba-recipes__slider'
+		asNavFor: '.ba-slider'
 
 	});
 });

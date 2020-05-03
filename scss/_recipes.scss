@@ -31,6 +31,9 @@
   align-items: center;
   justify-content: center;
   background: #fff;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
   &__rate {
     position: absolute;
     z-index: 2;
@@ -52,6 +55,10 @@
     top: 0;
     left: 0;
     width: 100%;
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+      height: 100%;
+    }
   }
   &__recipe {
     padding: 10% 0 30% 0;
@@ -59,39 +66,57 @@
     z-index: 3;
     transform: translateY(25%);
     transition: transform 0.3s;
+
     @media screen and (min-width: 500px) {
       transform: translateY(33%);
     }
+    @media screen and (min-width: 1024px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      width: 50%;
+      transform: translateY(0);
+      transform: translateX(0);
+      min-height: 500px;
+    }
     &.active {
       transform: translateY(0%);
+      @media screen and (min-width: 1024px) {
+        transform: translateX(-88%);
+      }
     }
   }
+}
+
+.ba-top-wrap {
+  width: 50%;
 }
 
 .ba-recipe {
   background-color: #ffffff;
   &__wraper {
     padding: 0 15px 0 15px;
-  }
-  &__cook-time {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff;
-    background: url(../img/bg-time.png) no-repeat center;
-    background-size: contain;
-    padding: 10px;
-    p {
-      margin: 0;
-      font-family: Alegreya;
-      color: $brown_color;
-      text-align: center;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      top: 50%;
+      background: url(../img/bg-recipe-text.png) no-repeat bottom right;
+      background-size: contain;
+      transition: transform 0.4s;
       @media screen and (min-width: 1024px) {
-        font-size: 18px;
+        bottom: -45%;
       }
     }
+    @media screen and (min-width: 1024px) {
+      padding: 50px 65px;
+      margin-bottom: 65px;
+    }
+  }
+  &__cook-time {
   }
   &__title {
     font-weight: 700;
@@ -100,15 +125,39 @@
   }
   &__sub-title {
     margin: 0 0 40px;
+    @media screen and (min-width: 1024px) {
+      margin: 0 0 70px;
+    }
   }
   &__content {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 250%;
+    }
     .ba-content {
+      @media screen and (min-width: 1024px) {
+        width: 100%;
+        padding-right: 50px;
+      }
       &--hidden {
         opacity: 0;
         transition: opacity 0.3s;
+        @media screen and (min-width: 1024px) {
+          pointer-events: none;
+        }
       }
       &--hidden.active {
         opacity: 1;
+        @media screen and (min-width: 1024px) {
+          pointer-events: initial;
+        }
+      }
+    }
+    .ba-content + .ba-content {
+      @media screen and (min-width: 1024px) {
+        margin-left: 30px;
       }
     }
   }
@@ -125,15 +174,23 @@
   height: 50px;
   border-radius: 50%;
   outline: none;
-  //   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #fff;
+  z-index: 3;
+  @media screen and (min-width: 1024px) {
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   &__icon {
     width: 9px;
     height: 16px;
-    //  margin: auto 0;
+    transform: rotate(90deg);
+    @media screen and (min-width: 1024px) {
+      transform: rotate(0);
+    }
   }
   &:focus,
   &:active {
@@ -142,41 +199,25 @@
   }
 }
 
-.ba-cook-time {
-  &__title {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-  }
-  &__time {
-    color: #dfc691;
-    font-size: 42px;
-    line-height: 0.9;
-    letter-spacing: 9.2px;
-    font-weight: 700;
-    @media screen and (min-width: 1024px) {
-      font-size: 92px;
-    }
-  }
-  &__measurement {
-  }
-}
-
 .ba-nav-slider {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //   max-width: 60%;
   width: 100%;
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 15px;
-  background-color: #fff;
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
   &__slide {
     outline: none;
     cursor: pointer;
     width: 54px !important;
+    @media screen and (min-width: 1024px) {
+      width: 94px !important;
+    }
     &:focus,
     &:active {
       .ba-nav-slider__pic {
@@ -191,10 +232,17 @@
     height: 50px;
     object-fit: cover;
     border: 2px solid transparent;
+    @media screen and (min-width: 1024px) {
+      width: 90px;
+      height: 90px;
+    }
   }
   .slick-list {
     overflow: hidden;
     max-width: 70%;
+    @media screen and (min-width: 1024px) {
+      max-width: 80%;
+    }
   }
   .slick-track {
     display: flex;
@@ -229,5 +277,81 @@
 .ba-nav-slider__slide.slick-current {
   .ba-nav-slider__pic {
     border: 2px solid #d8bba3;
+  }
+}
+
+.ba-cook-time {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+  box-shadow: -15px 20px 53px -15px rgba(0, 0, 0, 0.75);
+  @media screen and (min-width: 1024px) {
+    width: 150px;
+    height: 150px;
+    right: -70px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 200px;
+    height: 200px;
+  }
+  &__slide {
+    background-color: #ffffff;
+    background: url(../img/bg-time.png) no-repeat center;
+    background-size: contain;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    @media screen and (min-width: 1024px) {
+      width: 150px;
+      height: 150px;
+      right: -70px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 200px;
+      height: 200px;
+    }
+    p {
+      margin: 0;
+      font-family: Alegreya;
+      color: $brown_color;
+      text-align: center;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+  &__time {
+    color: #dfc691;
+    font-size: 42px;
+    line-height: 0.9;
+    letter-spacing: 9.2px;
+    font-weight: 700;
+    @media screen and (min-width: 1024px) {
+      font-size: 72px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 92px;
+    }
+  }
+  &__measurement {
+  }
+  .slick-list {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
