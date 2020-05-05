@@ -108,6 +108,10 @@ html {
   width: 8.3333%;
 }
 
+.ba-offset-1 {
+  margin-left: 8.3333%;
+}
+
 /* Phone landscape and bigger */
 .ba-col-small-12 {
   width: 100%;
@@ -144,6 +148,10 @@ html {
 }
 .ba-col-small-1 {
   width: 8.3333%;
+}
+
+.ba-small-offset-1 {
+  margin-left: 8.3333%;
 }
 /* Tablet and bigger */
 
@@ -183,6 +191,9 @@ html {
   }
   .ba-col-medium-1 {
     width: 8.3333%;
+  }
+  .ba-medium-offset-0 {
+    margin-left: 0;
   }
 }
 

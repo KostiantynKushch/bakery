@@ -3,6 +3,7 @@
 $main_font: 'ProximaNova', sans-serif;
 $main_font_color: #56534c;
 $brown_color: #a47d5e;
+$brown_light_color: #c8a593;
 
 @import 'normalize';
 @import 'layout';
@@ -13,6 +14,7 @@ $brown_color: #a47d5e;
 @import 'hero';
 @import 'art';
 @import 'recipes';
+@import 'breakfast';
 
 /* Layout */
 .ba-container {

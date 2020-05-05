@@ -1,6 +1,7 @@
 /* Typography */
 body {
   font: 400 14px/1.7 $main_font;
+  color: $main_font_color;
 }
 
 h1 {
@@ -26,7 +27,7 @@ h6 {
 }
 
 h2 {
-  font: 700 32px/1.2 'Alegreya', serif;
+  font: 700 34px/1.2 'Alegreya', serif;
   @media screen and (min-width: 1440px) {
     font-size: 60px;
   }
@@ -41,6 +42,9 @@ h3 {
 
 h4 {
   font: 700 24px/1.2 'Alegreya', serif;
+  @media screen and (min-width: 1440px) {
+    font-size: 44px;
+  }
 }
 
 h5,
