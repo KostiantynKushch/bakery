@@ -4,6 +4,10 @@
   background-size: cover;
   &__wraper {
     position: relative;
+    @media screen and (min-width: 1024px) {
+      margin-left: -25px;
+      padding-right: 105px;
+    }
   }
   &__slider {
     .slick-list {
@@ -44,9 +48,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1024px) {
+      top: 43%;
+      left: 27px;
+    }
     .ba-star {
       width: 21px;
       height: 20px;
+    }
+
+    .ba-star + .ba-star {
+      margin-top: 10px;
     }
   }
   &__picture {
@@ -56,7 +68,7 @@
     left: 0;
     width: 100%;
     @media screen and (min-width: 1024px) {
-      width: 50%;
+      width: 43%;
       height: 100%;
     }
   }
@@ -82,14 +94,14 @@
     &.active {
       transform: translateY(0%);
       @media screen and (min-width: 1024px) {
-        transform: translateX(-88%);
+        transform: translateX(-78%);
       }
     }
   }
 }
 
 .ba-top-wrap {
-  width: 50%;
+  width: 37%;
 }
 
 .ba-recipe {
@@ -108,12 +120,12 @@
       background-size: contain;
       transition: transform 0.4s;
       @media screen and (min-width: 1024px) {
-        bottom: -45%;
+        bottom: -31%;
+        right: -13%;
       }
     }
     @media screen and (min-width: 1024px) {
-      padding: 50px 65px;
-      margin-bottom: 65px;
+      padding: 71px 65px 70px 60px;
     }
   }
   &__cook-time {
@@ -122,11 +134,13 @@
     font-weight: 700;
     color: $main_font_color;
     margin-bottom: 10px;
+    letter-spacing: 1.8px;
   }
   &__sub-title {
     margin: 0 0 40px;
+    letter-spacing: 2.8px;
     @media screen and (min-width: 1024px) {
-      margin: 0 0 70px;
+      margin: 0 0 51px;
     }
   }
   &__content {
@@ -139,7 +153,7 @@
     .ba-content {
       @media screen and (min-width: 1024px) {
         width: 100%;
-        padding-right: 50px;
+        padding-right: 20px;
       }
       &--hidden {
         opacity: 0;
@@ -157,7 +171,7 @@
     }
     .ba-content + .ba-content {
       @media screen and (min-width: 1024px) {
-        margin-left: 30px;
+        padding-right: 120px;
       }
     }
   }
@@ -209,7 +223,9 @@
   right: 0;
   padding: 15px;
   @media screen and (min-width: 1024px) {
-    width: 50%;
+    width: 41%;
+    right: 150px;
+    padding: 0 0 20px;
   }
   &__slide {
     outline: none;
@@ -233,8 +249,8 @@
     object-fit: cover;
     border: 2px solid transparent;
     @media screen and (min-width: 1024px) {
-      width: 90px;
-      height: 90px;
+      width: 92px;
+      height: 92px;
     }
   }
   .slick-list {
@@ -291,7 +307,6 @@
   @media screen and (min-width: 1024px) {
     width: 150px;
     height: 150px;
-    right: -70px;
   }
   @media screen and (min-width: 1440px) {
     width: 200px;
@@ -301,7 +316,6 @@
     background-color: #ffffff;
     background: url(../img/bg-time.png) no-repeat center;
     background-size: contain;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,8 +340,12 @@
   }
   &__title {
     text-transform: uppercase;
+
     font-weight: 700;
     letter-spacing: 1.8px;
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+    }
   }
   &__time {
     color: #dfc691;
@@ -343,6 +361,9 @@
     }
   }
   &__measurement {
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+    }
   }
   .slick-list {
     overflow: hidden;
