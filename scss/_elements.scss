@@ -60,7 +60,7 @@ p {
 
 .ba-sub-title {
   color: $brown_color;
-  line-height: 0.6;
+  line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 2.7px;
 }
@@ -116,5 +116,22 @@ textarea {
   }
   @media screen and (min-width: 1024px) {
     padding: 12px 50px;
+  }
+}
+
+.ba-time {
+  &--main {
+  }
+  &__title {
+    &--main {
+    }
+  }
+  &__time {
+    &--main {
+    }
+  }
+  &__measurement {
+    &--main {
+    }
   }
 }
