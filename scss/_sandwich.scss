@@ -1,30 +1,121 @@
 .ba-sandwich {
-  padding: 70px 0;
+  padding: 100px 0;
+  @media screen and (min-width: 1024px) {
+    padding: 100px 0 70px;
+  }
   &__header {
     text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 85px;
+    }
+    &:before {
+      position: absolute;
+      top: -120%;
+      left: 50%;
+      transform: translate(-50%);
+      content: '';
+      width: 108px;
+      height: 123px;
+      background: url(../img/bg-sandwich-header.png) no-repeat top center;
+      background-size: contain;
+      z-index: -1;
+      @media screen and (min-width: 345px) {
+        top: -150%;
+      }
+      @media screen and (min-width: 1440px) {
+        top: -80%;
+      }
+    }
   }
   &__titile {
+    letter-spacing: 1.7px;
+    margin: 0 0 7px;
   }
   &__sub-title {
+    margin: 0;
   }
   &__preview {
+    position: relative;
+    max-width: 840px;
+    margin: 0 auto;
   }
   &__picture {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.54);
+    border: 10px solid #ffffff;
   }
-  &__time {
+  &__sidebar {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ba-time:nth-child(1) {
+      margin-bottom: 1px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      top: -20px;
+      bottom: -18px;
+    }
   }
   &__cta {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 1px dashed #dfc691;
+    background-color: #ffffff;
+    color: #dfc691;
+    letter-spacing: 0.9px;
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+      left: -25px;
+      bottom: -8px;
+      padding: 13px 28px;
+    }
+    &:hover {
+      background: #9e9c93;
+      color: #fff;
+      opacity: 0.9;
+      border: 1px solid #9e9c93;
+    }
   }
   &__highlights {
+    @media screen and (min-width: 1024px) {
+      margin-top: -90px;
+    }
   }
   &__highlight {
   }
 }
 
 .ba-highlight {
+  text-align: center;
+  margin-bottom: 50px;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 55px;
+  }
   &__picture {
+    border-radius: 50%;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 12px;
+    }
   }
   &__title {
+    color: #a47d5e;
+    font-family: Alegreya;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    line-height: 1;
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+      margin: 0 0 16px;
+    }
   }
   &__description {
   }

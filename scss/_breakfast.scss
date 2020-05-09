@@ -110,6 +110,7 @@
     width: 411px;
     height: 220px;
     background: url(../img/bg-post.png) no-repeat top left;
+    pointer-events: none;
   }
 
   &__header {
